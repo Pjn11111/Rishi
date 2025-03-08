@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        /* Preloader Animation */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .preloader img {
+            width: 150px;
+            animation: zoomInOut 4s ease-in-out;
+        }
+        @keyframes zoomInOut {
+            0% { transform: scale(0.2); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Hide preloader and show main content */
+        .hidden {
+            display: none;
+        }
+
+        .main-content {
+            display: none;
+            padding: 100px 20px 50px; /* Added space between header and title */
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo, .university {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e50914;
+        }
+
+        /* Event Grid */
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 80px 20px 20px; /* Adjusted for header */
+        }
+        .event-box {
+            background: #222;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .event-box:hover {
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+        }
+        .event-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .event-box p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: left;
+            padding: 20px;
+            background-color: #141414;
+            font-size: 14px;
+        }
+        .footer a {
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <img src="img.jpg" alt="College Event Logo">
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">VAUDEVILLE</div>
+        <div class="university">NIRMA UNIVERSITY</div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to the College Event</h1>
+        <div class="event-grid">
+            <div class="event-box"><img src="1.jpg" alt="Dancing"><p>Step Up</p></div>
+            <div class="event-box"><img src="2.jpg" alt="Singing"><p>Bandish Bandits</p></div>
+            <div class="event-box"><img src="3.jpg" alt="Talk Show"><p>Talkflix</p></div>
+            <div class="event-box"><img src="4.jpg" alt="Debate"><p>The Final Verdict (Suits)</p></div>
+            <div class="event-box"><img src="5.jpg" alt="Escape Room"><p>Locke and Key</p></div>
+            <div class="event-box"><img src="6.jpg" alt="Treasure Hunt"><p>All of Us Are Dead</p></div>
+            <div class="event-box"><img src="7.jpg" alt="Gully Cricket"><p>Lagaan</p></div>
+            <div class="event-box"><img src="8.jpg" alt="Esports"><p>Arcane</p></div>
+            <div class="event-box"><img src="9.jpg" alt="Instrumental"><p>Lalaland</p></div>
+            <div class="event-box"><img src="10.jpg" alt="Fine Arts"><p>The Sky is Pink</p></div>
+            <div class="event-box"><img src="11.jpg" alt="Open Mic"><p>Panchayat</p></div>
+            <div class="event-box"><img src="12.jpg" alt="Street Dancing"><p>Street Dancer</p></div>
+            <div class="event-box"><img src="13.jpg" alt="Nukkad Natak"><p>Tamasha</p></div>
+            <div class="event-box"><img src="14.jpg" alt="Fashion Walk"><p>Devil Wears Prada</p></div>
+            <div class="event-box"><img src="15.jpg" alt="Sufi Night"><p>Farzi Mushayara</p></div>
+            <div class="event-box"><img src="16.jpg" alt="Concert Night"><p>Pro Night</p></div>
+            <div class="event-box"><img src="17.jpg" alt="DJ Night"><p>Vecna’s Vibe (Stranger Things)</p></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        
+        <a href="https://www.instagram.com/poojannnnn._/" target="_blank"><p>Made with ❤️ by Poojan</p></a>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            setTimeout(() => {
+                document.querySelector(".preloader").classList.add("hidden");
+                document.querySelector(".main-content").style.display = "block";
+                document.body.style.overflow = "auto";
+            }, 4000); // Extended animation time to 4 seconds
+        };
+    </script>
+</body>
+</html>
